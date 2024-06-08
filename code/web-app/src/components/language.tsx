@@ -33,7 +33,7 @@ export default function Language({
         />
       </div>
 
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 h-120">
+      <ul className="grid gap-4 grid-cols-1 h-120">
         {languages
           .filter((lang) =>
             lang.toLowerCase().includes(inputValue.toLowerCase())
@@ -43,7 +43,8 @@ export default function Language({
               <li
                 onClick={() => handleLanguageSelect(lang)}
                 className={`bg-white shadow-md rounded-md p-4 cursor-pointer text-left w-full ${
-                  selectedLanguage.includes(lang) ? "bg-green-100" : ""
+                  //if the selected language is equal to the language, then add a green background
+                  selectedLanguage === lang ? "bg-green-200" : ""
                 }`}
                 key={lang}
               >

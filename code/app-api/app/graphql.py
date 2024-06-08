@@ -21,7 +21,7 @@ class Context(BaseContext):
     @cached_property
     def user(self) -> dict | None:
         if self.request:
-            if auth_ := self.request.headers.get("Authorization"):
+              if auth_ := self.request.headers.get("REACT_APP_API_KEY"):
                 method, token = auth_.split(" ")
                 if method == 'Bearer':
                     if data := auth.verify_and_decode_jwt(token):

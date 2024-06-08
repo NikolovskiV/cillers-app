@@ -43,6 +43,7 @@ const Products: React.FC = () => {
     // }
     // const newlangs: string[] = [...selectedLanguage, language];
     setSelectedLanguage(language);
+    console.log(selectedLanguage);
   };
   const handleInputChange = (e: any) => {
     setInputValue(e.target.value);
@@ -88,7 +89,7 @@ const Products: React.FC = () => {
               handleNavigation={handleNavigation}
               />
               
-            ) : navigation === "products" ? (
+            ) : navigation === "pdf" ? (
               <div />
             )
             : (

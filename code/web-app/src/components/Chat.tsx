@@ -41,11 +41,12 @@ export interface ChatHistoryProps {
         </div>
     )
 }
-export default function Chat({ messages, sendMessage }: ChatHistoryProps) {
+export default function Chat({ messages, sendMessage, handleNavigation }: ChatHistoryProps) {
     return (
         <div>
             <div className="chat-window flex flex-col h-full">
-            <button      onClick={() => handleNavigation("chat")} className="absolute top-0 right-0 m-2 p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none">
+            <button onClick={() => handleNavigation('language')}
+             className="absolute top-0 right-0 m-2 p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none">
                     Done
                 </button>
                 <div className="messages-container flex-1 overflow-y-auto p-4">
