@@ -22,6 +22,8 @@ const Authenticated: React.FC<AuthenticatedProps> = ({ userInfo, logout, csrf })
             <button onClick={logout}>
                 Logout
             </button>
+
+
             <Products />
         </ApolloProvider>
     )
